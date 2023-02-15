@@ -26,8 +26,10 @@ pip install -r requirements.txt
 python server.py
 ```
 
-6. Open browser type URL localhost:5000
+6. Open browser type URL - `localhost:5000`
 
 7. To access stored results Use creadentials 
-   Username : admin
-   Password : admin
+```
+Username : admin
+Password : admin
+```
