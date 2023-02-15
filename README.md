@@ -3,27 +3,31 @@ The goal of this project is to develop an automated chronic kidney disease asses
 
 ### To run application
 
-1. Install all the libraries
-$ pip install -r requirements.txt
+1. Install `virtualenv` package if not already present.
+```
+pip install virtualenv
+```
 
-2. To run application
-$ python server.py
+2. Clone the repository and navigate into it
 
-3. Open browser type URL localhost:5000
+3. Create and activate a new environment for the project (for Windows):
+```
+python -m virtualenv venv
+.\venv\Scripts\activate
+```
 
-4. To access stored results Use creadentials 
+4. Install all the libraries
+```
+pip install -r requirements.txt
+```
+
+5. To run application
+```
+python server.py
+```
+
+6. Open browser type URL localhost:5000
+
+7. To access stored results Use creadentials 
    Username : admin
    Password : admin
-
-### Demo
-link : https://youtu.be/lD63ZzmgQmg
-
-![](static/scrn1.png)
-
-![](static/scrn2.png)
-
-![](static/scrn3.png)
-
-![](static/scrn4.png)
-
-![](static/scrn5.png)
