@@ -42,25 +42,25 @@ def logout():
 
 @app.route('/predict', methods=["POST"])
 def predict():
-    age = int(request.form['age'])
-    bp = int(request.form['bp'])
-    sugar = int(request.form['sugar'])
-    pc = int(request.form['pc'])
-    pcc = int(request.form['pcc'])
-    sodium = int(request.form['sodium'])
+    sg = float(request.form['sg'])
+    al = float(request.form['al'])
+    rc = float(request.form['rc'])
+    sc = float(request.form['sc'])
+    su = float(request.form['su'])
+    dm = int(request.form['dm'])
     hemo = float(request.form['hemo'])
+    pcv = float(request.form['pcv'])
     htn = int(request.form['htn'])
-    db = int(request.form['db'])
 
-    values = [age, bp, sugar, pc, pcc, sodium, hemo, htn,db]
+    values = [sg, al, rc, sc, su, dm, hemo, pcv, htn]
     print(values)
     model = Model()
-    classifier = model.randomforest_classifier()
+    classifier = model.mlp_model()
     prediction = classifier.predict([values])
-    print(f"Kidney disease = {prediction[0]}")
+    print("Kidney disease = {prediction[0]}")
 
     time = datetime.now().strftime("%m/%d/%Y (%H:%M:%S)")
-    write_to_csv(time,age, bp, sugar, pc, pcc, sodium, hemo, htn,db,prediction[0])
+    write_to_csv(time,sg, al, rc, sc, su, dm, hemo, pcv,htn,prediction[0])
     return render_template("result.html", result=prediction[0])
 
 app.secret_key = os.urandom(12)
