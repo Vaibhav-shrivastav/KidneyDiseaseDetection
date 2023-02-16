@@ -117,49 +117,37 @@
             <form action="/predict" method="POST">
             <div class="icon-box mt-5 mt-lg-0" data-aos="fade-up">
               <i class="bx bx-receipt"></i>
-              <h4>Age</h4>
+              <h4>Specific Gravity(nominal) </h4>
               <div class="form-group">
-                    <input required type="number" name="age" class="form-control">
+                    <input required type="any" name="sg" class="form-control">
             </div>
             </div>
             <div class="icon-box mt-5" data-aos="fade-up" data-aos-delay="100">
               <i class="bx bx-receipt"></i>
-              <h4>Blood Pressure</h4>
+              <h4>Albumin(nominal)</h4>
               <div class="form-group">
-                    <input required type="number" name="bp" class="form-control">  
+                    <input required type="any" name="al" class="form-control">  
             </div>
             </div>
             <div class="icon-box mt-5" data-aos="fade-up" data-aos-delay="200">
               <i class="bx bx-receipt"></i>
+              <h4>Red Blood Cell Count(numerical)</h4>
+              <div class="form-group">
+                    <input required type="any" name="rc" class="form-control">  
+            </div>
+            </div>
+            <div class="icon-box mt-5" data-aos="fade-up" data-aos-delay="300">
+              <i class="bx bx-receipt"></i>
+              <h4>Serum Creatinine(numerical) </h4>
+              <div class="form-group">
+                    <input required type="any" name="sc" class="form-control">  
+            </div>
+            </div>
+            <div class="icon-box mt-5" data-aos="fade-up" data-aos-delay="300">
+              <i class="bx bx-receipt"></i>
               <h4>Sugar(nominal)</h4>
               <div class="form-group">
-                    <select required name="sugar" class="form-control">
-                            <option value="0">0</option>
-                            <option value="1">1</option>
-                            <option value="2">2</option>
-                            <option value="3">3</option>
-                            <option value="4">4</option>
-                        </select>
-              </div>
-            </div>
-            <div class="icon-box mt-5" data-aos="fade-up" data-aos-delay="300">
-              <i class="bx bx-receipt"></i>
-              <h4>Pus Cell</h4>
-              <div class="form-group">
-                    <select required name="pc" class="form-control">
-                            <option value="1">Normal</option>
-                            <option value="0">Abnormal</option>
-                        </select>
-              </div>
-            </div>
-            <div class="icon-box mt-5" data-aos="fade-up" data-aos-delay="300">
-              <i class="bx bx-receipt"></i>
-              <h4>Pus Cell Clumps</h4>
-              <div class="form-group">
-                    <select required name="pcc" class="form-control">
-                            <option value="0">NotPresent</option>
-                            <option value="1">Present</option>
-                        </select>
+                <input required type="any" name="su" class="form-control">  
               </div>
             </div>
            
@@ -169,35 +157,35 @@
 
                 <div class="icon-box mt-5" data-aos="fade-up" data-aos-delay="300">
                     <i class="bx bx-receipt"></i>
-                            <h4>Sodium(mEq/L)</h4>
+                            <h4>Diabetes Mellitus(nominal)</h4>
                             <div class="form-group">
-                                    <input required type="number" name="sodium" class="form-control">
-                           </div>
+                              <select required name="dm" class="form-control">
+                                      <option value="0">No</option>
+                                      <option value="1">Yes</option>
+                                  </select>
+                      </div>
                 </div>
 
 
               <div class="icon-box mt-5 mt-lg-0" data-aos="fade-up">
                 <i class="bx bx-receipt"></i>
-                <h4>Hemoglobin(gms)</h4>
+                <h4>Hemoglobin(numerical)</h4>
                 <div class="form-group">
                         <input required type="any" name="hemo" class="form-control">
                 </div>
               </div>
               <div class="icon-box mt-5" data-aos="fade-up" data-aos-delay="100">
                 <i class="bx bx-receipt"></i>
-                <h4>Hypertension</h4>
+                <h4>Packed Cell Volume(numerical)</h4>
                 <div class="form-group">
-                        <select required name="htn" class="form-control">
-                                <option value="0">No</option>
-                                <option value="1">Yes</option>
-                            </select>
+                  <input required type="any" name="pcv" class="form-control">
                 </div>
               </div>
               <div class="icon-box mt-5" data-aos="fade-up" data-aos-delay="200">
                 <i class="bx bx-receipt"></i>
-                <h4>Diabetes Mellitus</h4>
+                <h4>Hypertension(nominal)</h4>
                 <div class="form-group">
-                        <select required name="db" class="form-control">
+                        <select required name="htn" class="form-control">
                                 <option value="0">No</option>
                                 <option value="1">Yes</option>
                             </select>
