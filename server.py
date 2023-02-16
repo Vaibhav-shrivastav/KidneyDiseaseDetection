@@ -52,12 +52,12 @@ def predict():
     pcv = float(request.form['pcv'])
     htn = int(request.form['htn'])
 
-    values = [sg, al, rc, sc, su, dm, hemo, pcv,htn]
+    values = [sg, al, rc, sc, su, dm, hemo, pcv, htn]
     print(values)
     model = Model()
-    classifier = model.randomforest_classifier()
+    classifier = model.mlp_model()
     prediction = classifier.predict([values])
-    print(f"Kidney disease = {prediction[0]}")
+    print("Kidney disease = {prediction[0]}")
 
     time = datetime.now().strftime("%m/%d/%Y (%H:%M:%S)")
     write_to_csv(time,sg, al, rc, sc, su, dm, hemo, pcv,htn,prediction[0])
